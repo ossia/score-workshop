@@ -1,4 +1,3 @@
-import Qt.labs.presentation 1.0
 import QtQuick 2.15
 import QtMultimedia 5.15
 Presentation {

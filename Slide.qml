@@ -103,8 +103,7 @@ Item {
         id: titleText
         font.pixelSize: titleFontSize
         text: title;
-        anchors.left: parent.left
-        anchors.leftMargin: 20
+        anchors.horizontalCenter: parent.horizontalCenter
         anchors.top: parent.top
         font.bold: true;
         font.family: slide.fontFamily
@@ -154,9 +153,10 @@ Item {
 
             visible: slide.writeInText != undefined;
         }
-
+/*
         Column {
             id: bulletPointsColumn
+            
             anchors.fill: parent
 
             Repeater {
@@ -176,7 +176,6 @@ Item {
 
                     Rectangle {
                         id: dot
-                        visible:false
                         anchors.baseline: text.baseline
                         anchors.baselineOffset: -text.font.pixelSize / 2
                         width: text.font.pixelSize / 3
@@ -206,6 +205,6 @@ Item {
                     }
                 }
             }
-        }
+        }**/
     }
 }

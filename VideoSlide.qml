@@ -1,4 +1,3 @@
-import Qt.labs.presentation 1.0 as Presentation
 import QtQuick 2.12
 import QtMultimedia 5.15
 Subsection {
