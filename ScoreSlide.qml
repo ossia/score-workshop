@@ -3,7 +3,7 @@ import QtGraphicalEffects 1.0
 
 import ApplicationLauncher 1.0
 
-Presentation.Slide
+Slide
 {
     id: slide
     property alias title: title.text

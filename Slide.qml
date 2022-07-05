@@ -52,6 +52,7 @@ Item {
     objectName: title
 
     property bool isSlide: true;
+    property int slideIndex: 0
 
     property bool delayPoints: false;
     property int _pointCounter: 0;
@@ -66,6 +67,7 @@ Item {
         return false;
     }
 
+    property bool visited: false
     property string title;
     property variant content: []
     property string centeredText

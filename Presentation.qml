@@ -46,9 +46,11 @@ import QtGraphicalEffects 1.0
 
 Item {
     id: root
-
-    property variant slides: []
+    
+    property var slides: []
+    property var slideContainers: []
     property int currentSlide: 0
+    signal slidesParsed()
 
     property bool showNotes: false;
     property bool allowDelay: true;
@@ -64,25 +66,43 @@ Item {
 
     // Private API
     property bool _faded: false
-    property int _userNum;
     property int _lastShownSlide: 0
 
     Component.onCompleted: {
         var slideCount = 0;
         var slides = [];
-        for (var i=0; i<root.children.length; ++i) {
-            var r = root.children[i];
+        var slideContainers = [];
+        for (let i=0; i<root.children.length; ++i) 
+        {
+            const r = root.children[i];
             if (r.isSlide) {
                 slides.push(r);
+                r.slideIndex = slideCount;
+                slideCount++;
+            }
+            else if(r.isSlideContainer)
+            {
+                slideContainers.push(r);
+                for(let j = 0; j < r.children.length;j++)
+                {
+                    const subr = r.children[j];
+                    if(subr.isSlide)
+                    {
+                        slides.push(subr);
+                        
+                        subr.slideIndex = slideCount;
+                        slideCount++;
+                    }
+                }
             }
         }
 
         root.slides = slides;
-        root._userNum = 0;
+        root.slideContainers = slideContainers;
 
         // Take the first argument which can be parsed as a number and set the first slide
         // so e.g.  qml slides.qml -- 4  will start on slide 4 (starting with 1)
-        for (var i = 0; i < Qt.application.arguments.length; ++i) {
+        for (let i = 0; i < Qt.application.arguments.length; ++i) {
             var num = parseInt(Qt.application.arguments[i])
             if (!isNaN(num)) {
                 currentSlide = Math.min(Math.max(0, num - 1), root.slides.length - 1)
@@ -93,6 +113,9 @@ Item {
         // Make first slide visible...
         if (root.slides.length > 0)
             root.slides[root.currentSlide].visible = true;
+        
+        
+        slidesParsed();
     }
 
     function switchSlides(from, to, forward) {
@@ -104,10 +127,19 @@ Item {
     onCurrentSlideChanged: {
         switchSlides(root.slides[_lastShownSlide], root.slides[currentSlide], currentSlide > _lastShownSlide)
         _lastShownSlide = currentSlide
+        
+        // Slide visitation
+        let cur = root.slides[currentSlide];
+        cur.visited = true
+        
+        // For chapter visitation
+        if(cur.parent.visited === false)
+        {
+            cur.parent.visited = true;
+        }
     }
 
     function goToNextSlide() {
-        root._userNum = 0
         if (_faded)
             return
         if (root.slides[currentSlide].delayPoints) {
@@ -119,34 +151,10 @@ Item {
     }
 
     function goToPreviousSlide() {
-        root._userNum = 0
         if (root._faded)
             return
         if (currentSlide - 1 >= 0)
             --currentSlide;
-    }
-
-    function goToUserSlide() {
-        --_userNum;
-        if (root._faded || _userNum >= root.slides.length)
-            return
-        if (_userNum < 0)
-            goToNextSlide()
-        else {
-            currentSlide = _userNum;
-            root.focus = true;
-        }
-    }
-
-    // directly type in the slide number: depends on root having focus
-    Keys.onPressed: {
-        if (event.key >= Qt.Key_0 && event.key <= Qt.Key_9)
-            _userNum = 10 * _userNum + (event.key - Qt.Key_0)
-        else {
-            if (event.key == Qt.Key_Return || event.key == Qt.Key_Enter)
-                goToUserSlide();
-            _userNum = 0;
-        }
     }
 
     // navigate with arrow keys

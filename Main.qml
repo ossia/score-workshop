@@ -1,5 +1,8 @@
 import QtQuick 2.15
 import QtMultimedia 5.15
+
+import "chapters/"
+
 Presentation {
     id: presentation
 
@@ -40,14 +43,14 @@ Presentation {
     {
         return `<a href="${str}" style="color: white;">${str}</a>`;
     }
+    
+    onSlidesParsed: toc.model = presentation.slideContainers
+    TableOfContents {
+        id: toc
+    }
 
-    Item {
-        Slide { 
-            title: "foo"
-        }
-        Slide { 
-            title: "bar"
-        }
+    Introduction {
+        
     }
 
 /*

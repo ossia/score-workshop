@@ -1,7 +1,7 @@
 import QtQuick 2.12
 import QtGraphicalEffects 1.0
 
-Presentation.Slide
+Slide
 {
     id: slide
     property alias title: title.text
