@@ -7,10 +7,23 @@ Slide {
     property alias model: tocmodel.model
     title: "TOC"
     
-    GridLayout {
+    Flickable {
+        anchors {
+            topMargin: 200
+            bottomMargin: 200
+            leftMargin: 50
+            rightMargin: 50
+        }
+        flickableDirection: Flickable.HorizontalFlick
+
         anchors.fill: toc
-        rows: 4
-        columns: 6
+        contentHeight: 800
+        contentWidth: gl.implicitWidth
+    GridLayout {
+            id: gl
+        rows: 2
+        flow: GridLayout.TopToBottom
+        columns: tocmodel.model.length / 2 + 1
         
         Repeater {
             id: tocmodel
@@ -27,6 +40,7 @@ Slide {
                   width: 280
                   height: 250
                   source: modelData.image
+                  fillMode: Image.PreserveAspectCrop
                   z: -5
                   
               }                  
@@ -44,7 +58,7 @@ Slide {
                   visible: !ma.containsMouse
                   anchors.fill: img
                   source: modelData.visited ? img : col
-                  radius: 32
+                  radius: modelData.visited ? 16 : 32
                   samples: 64
                   transparentBorder: false
                   z: -3
@@ -71,5 +85,5 @@ Slide {
             }
         }
     }
-
+    }
 }

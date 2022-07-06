@@ -48,10 +48,29 @@ Presentation {
     TableOfContents {
         id: toc
     }
-
-    Introduction {
-        
-    }
+    
+    Introduction { }
+    TimeModel { }
+    UiBasics { }
+    Audio { }
+    Video { }
+    Devices { }
+    Mapping { }
+    Automating { }
+    Processes { }
+    Presets { }
+    Transport { }
+    JS { }
+    Music { }
+    Faust { }
+    Scripting { }
+    Installation { }
+    Remote { }
+    Network { }
+    Jit { }
+    PureData { }
+    Plugins { }
+    
 
 /*
     ScoreBar {
