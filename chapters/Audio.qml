@@ -3,9 +3,6 @@ import ".."
 Chapter {
     title: "Audio"
     image: "docimages/features/audio.png"
-    Section {
-        title: "Audio"
-    }
     
     Section {
         title: "Playing wwith audio files"

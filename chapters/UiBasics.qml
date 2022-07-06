@@ -20,6 +20,14 @@ Chapter {
     }
     
     Section {
+        title: "The score user library"
+    }
+    
+    Section {
+        title: "Packages"
+    }
+    
+    Section {
         title: "Score / timeline view"
     }
     

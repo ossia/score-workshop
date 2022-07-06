@@ -4,7 +4,7 @@ Chapter {
     title: "Devices"
     image: "docimages/features/localtree.png"
     Section {
-        title: "Devices: OSC-ish tree model"
+        title: "OSC-ish tree model"
     }
     Section {
         title: "MIDI"

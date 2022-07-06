@@ -16,14 +16,13 @@ Presentation {
     fontScale: 1.0
 
     keyShortcutsEnabled: false 
-    property color sectionColor: "#E7D7AD"
-    property color itvColor: "#EBDBB2" // Qt.rgba(3/255, 195/255, 221/255, 1.)
-    property color darkColor: "#FAB2DF" // Qt.rgba(3/255, 155/255, 201/255, 1.)
-    textColor: "#E7D7AD" //Qt.rgba(180/255, 220/255, 220/255, 1.)
+    property color sectionColor: itvColor
+    property color itvColor: Qt.rgba(3/255, 195/255, 221/255, 1.)
+    property color darkColor: Qt.rgba(3/255, 155/255, 201/255, 1.)
+    textColor: Qt.rgba(180/255, 220/255, 220/255, 1.)
     Rectangle {
         anchors.fill: parent
-        color: "#282828"
-        // color: Qt.rgba(37/255, 41/255, 48/255, 1.)
+        color: Qt.rgba(37/255, 41/255, 48/255, 1.)
     }
     // Component.onCompleted: currentSlide = 8
 

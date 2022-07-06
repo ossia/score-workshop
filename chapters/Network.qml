@@ -3,9 +3,14 @@ import ".."
 Chapter {
     title: "Network"
     image: "images/score.png"
+    
     Section {
-        
-        title: "yea"
-        content: ["woo"]
+        title: "Concepts"
+    }    
+    Section {
+        title: "Distributed editing"
+    }
+    Section {
+        title: "Distributed playback and execution"
     }
 }

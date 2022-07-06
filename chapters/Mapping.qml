@@ -12,10 +12,14 @@ Chapter {
     }
     
     Section {
-        title: "Mapping an input to an output through the mapping curve"
+        title: "Mapping an input to an output through the mapping curve process"
     }    
     
     Section {
         title: "Mapping an input to an output through an expression process"
+    }    
+    
+    Section {
+        title: "Smoothing signals"
     }
 }

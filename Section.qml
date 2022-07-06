@@ -68,6 +68,7 @@ Slide
         id: title
         width: parent.width
         color: sectionColor
+        linkColor: Qt.lighter(color)
 
         x: 120
         anchors.verticalCenter: parent.verticalCenter
