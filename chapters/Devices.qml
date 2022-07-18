@@ -11,6 +11,9 @@ Chapter {
     }
     Section {
         title: "OSC"
+    }    
+    Section {
+        title: "TouchOSC support"
     }
     Section {
         title: "OSCQuery"

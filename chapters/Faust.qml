@@ -1,7 +1,7 @@
 import ".."
 
 Chapter {
-    title: "Faust"
+    title: "Faust, VST, JSFX..."
     image: "docimages/features/faust.png"
     Section {
         title: "Faust support"
