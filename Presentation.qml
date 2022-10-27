@@ -142,13 +142,18 @@ Item {
 
     function goToNextSlide() {
         if (_faded)
-            return
+            return;
         if (root.slides[currentSlide].delayPoints) {
             if (root.slides[currentSlide]._advance())
                 return;
         }
         if (currentSlide + 1 < root.slides.length)
-            ++currentSlide;
+        {
+            if(root.slides[currentSlide].parent == root.slides[currentSlide + 1].parent)
+              ++currentSlide; // Advance to next slide in section
+            else
+              currentSlide = 1; // Go back to TOC
+        }
     }
 
     function goToPreviousSlide() {

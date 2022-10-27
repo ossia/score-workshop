@@ -51,16 +51,16 @@ Item {
     property color textColor: parent.textColor !== undefined ? parent.textColor : "black"
     property string fontFamily: parent.fontFamily !== undefined ? parent.fontFamily : "Helvetica"
 
+    function currentTime() {
+        var d = new Date();
+        var m = d.getMinutes();
+        if (m < 10) m = "0" + m;
+        return d.getHours() + ":" + m;
+    }
+
 
     Text {
-        text: currentTime();
-
-        function currentTime() {
-            var d = new Date();
-            var m = d.getMinutes();
-            if (m < 10) m = "0" + m;
-            return d.getHours() + ":" + m;
-        }
+        text: clock.currentTime();
 
         color: textColor;
         font.family: fontFamily;
@@ -77,7 +77,7 @@ Item {
             interval: 60000;
             repeat: true;
             running: true
-            onTriggered: clock.text = clock.currentTime();
+            onTriggered: text = clock.currentTime();
         }
     }
 
