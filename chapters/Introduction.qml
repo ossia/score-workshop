@@ -33,6 +33,12 @@ Discord: ${link("https://discord.gg/8Hzm4UduaS")}`
         source: "../images/score-history.png"
     }
 
+    FlickableImageSlide {
+        //autoScale: true
+        //fullScreen: true
+        source: "../images/ossia-people.png"
+    }
+
     Section {
         title: "Why ossia, why score"
     }

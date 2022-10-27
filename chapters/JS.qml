@@ -6,4 +6,12 @@ Chapter {
     Section {
         title: "JavaScript process"
     }
+
+    ScoreSlide {
+
+    }
+
+    FlickableImageSlide {
+        source: "../images/js-performance.png"
+    }
 }
