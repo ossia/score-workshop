@@ -15,7 +15,7 @@ Presentation {
     fontFamily: "Fira Sans"
     fontScale: 1.0
 
-    keyShortcutsEnabled: false 
+    keyShortcutsEnabled: false
     property color sectionColor: itvColor
     property color itvColor: Qt.rgba(3/255, 195/255, 221/255, 1.)
     property color darkColor: Qt.rgba(3/255, 155/255, 201/255, 1.)
@@ -29,9 +29,9 @@ Presentation {
     Clock {
     }
     CoverSlide {
-        title: "ossia score 3\ninteractive workshop\n"
-        presenter: "Jean-Michaël Celerier (celtera.dev, ossia.io, SCRIME, ...)"
-        email: "\n\ncontact: @jcelerier / @jcelerie / jcelerier.name\n\n\n\nICMC 2022"
+        title: "Timelines at the TML\n\nan ossia score 3\n★ interactive workshop ★\n"
+        presenter: "Jean-Michaël Celerier (Concordia, celtera.dev, ossia.io, SCRIME, ...)"
+        email: "\ntwitter: @jcelerie\nweb: jcelerier.name\n\n\n\n"
     }
 
     function code(str)
@@ -40,36 +40,83 @@ Presentation {
     }
     function link(str)
     {
-        return `<a href="${str}" style="color: white;">${str}</a>`;
+        return `<a href="${str}" style="color: red; text-decoration: none;">${str}</a>`;
     }
-    
+
     onSlidesParsed: toc.model = presentation.slideContainers
     TableOfContents {
         id: toc
     }
-    
+
     Introduction { }
+    Gallery {
+        images: [
+            "gallery/Big_Dyew-1920x917.jpg",
+            "gallery/DID_4858.JPG",
+            "gallery/MECA 2.JPG",
+            "gallery/14-Virages2.jpg",
+            "gallery/arbre-intégrale.jpg",
+            "gallery/aleas.png",
+            "gallery/sonotact.jpg",
+            "gallery/Désoleil.jpg",
+            "gallery/quarre.jpg",
+            "gallery/Nebula_ChampignonsNeigeJaune.jpg",
+            "gallery/metabot_score.jpg",
+            "gallery/heimat.jpeg",
+            "gallery/Qui-parle-donc_Event.jpg",
+            "gallery/3dome.jpg",
+            "gallery/carrousel.jpg",
+            "images/IMG_20200909_174046.jpg",
+        ]
+    }
+    Resources { }
+
     TimeModel { }
     UiBasics { }
     Audio { }
     Video { }
     Devices { }
-    Mapping { }
     Automating { }
+
+    Philosophy { }
+
+    Mapping { }
     Processes { }
     Presets { }
     Transport { }
+
+    Gallery {
+        title: "Science"
+        image: "papers/page.png"
+        images: [
+            "papers/petri.png",
+            "papers/verification.png",
+            "papers/reactiveml.png",
+            "papers/colouredpetri.png",
+            "papers/branching.png",
+            "papers/branching2.png"
+        ]
+    }
+
+    Postdoc { }
+
     JS { }
-    Music { }
     Faust { }
+    PureData { }
     Scripting { }
+
+    Perspectives { }
+
+    Bindings { }
+    Music { }
     Installation { }
     Remote { }
     Network { }
     Jit { }
-    PureData { }
+    Threedim { }
     Plugins { }
-    
+
+
 
 /*
     ScoreBar {
@@ -81,13 +128,5 @@ Presentation {
     }
 
     */
-    Text {
-        x: presentation.width - width * 1.5
-        y: presentation.height - font.pixelSize - 0.02 * presentation.height
-        font { pointSize: 20 }
-        text: (1 + presentation._lastShownSlide) + "/" + parent.slides.length
-        color: "#ffff00"
-        visible: !presentation.slides[presentation._lastShownSlide].hideBar
-    }
 
 }

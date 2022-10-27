@@ -6,7 +6,7 @@ Slide {
     id: toc
     property alias model: tocmodel.model
     title: "TOC"
-    
+
     Flickable {
         anchors {
             topMargin: 200
@@ -24,26 +24,32 @@ Slide {
         rows: 2
         flow: GridLayout.TopToBottom
         columns: tocmodel.model.length / 2 + 1
-        
+
         Repeater {
             id: tocmodel
-            Rectangle { 
+            Rectangle {
+              id: itemrect
+              property real chapterScaling: modelData.bigChapter ? 2 : 1
               radius: 10
               color: "transparent"
               border.width: 3
               border.color: "white"
               width: 280
-              height: 300
-              
+              height: 300 * chapterScaling
+              Layout.rowSpan: chapterScaling
+              clip: true
+
               Image {
                   id: img
-                  width: 280
-                  height: 250
+                  x: 3
+                  y: 3
+                  width: 280 - 6
+                  height: itemrect.height - 50
                   source: modelData.image
-                  fillMode: Image.PreserveAspectCrop
+                  fillMode: Image.Pad
                   z: -5
-                  
-              }                  
+              }
+
               Colorize {
                   id: col
                   anchors.fill: img
@@ -52,7 +58,7 @@ Slide {
                   visible: !modelData.visited
                   z: -4
               }
-              
+
               GaussianBlur {
                   id: gb
                   visible: !ma.containsMouse
@@ -70,8 +76,8 @@ Slide {
                   text: modelData.title
                   anchors.horizontalCenter: parent.horizontalCenter
                   anchors.top: img.bottom
-              } 
-              
+              }
+
               MouseArea {
                   id: ma
                   anchors.fill: parent

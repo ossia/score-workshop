@@ -12,6 +12,7 @@ Subsection {
         z: -1
         source: "play.png"
         anchors.fill: parent
+        visible: vembedded.playbackState !== MediaPlayer.PlayingState
     }
     Video {
       id: vembedded

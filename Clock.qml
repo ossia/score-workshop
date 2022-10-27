@@ -43,35 +43,62 @@
 
 import QtQuick 2.0
 
-Text {
+Item {
     id: clock
-
+    anchors.fill: parent
     property real fontSize: parent.height * 0.05
     property real fontScale: 0.5
-    property color textColor: parent.textColor != undefined ? parent.textColor : "black"
-    property string fontFamily: parent.fontFamily != undefined ? parent.fontFamily : "Helvetica"
+    property color textColor: parent.textColor !== undefined ? parent.textColor : "black"
+    property string fontFamily: parent.fontFamily !== undefined ? parent.fontFamily : "Helvetica"
 
-    text: currentTime();
 
-    function currentTime() {
-        var d = new Date();
-        var m = d.getMinutes();
-        if (m < 10) m = "0" + m;
-        return d.getHours() + ":" + m;
+    Text {
+        text: currentTime();
+
+        function currentTime() {
+            var d = new Date();
+            var m = d.getMinutes();
+            if (m < 10) m = "0" + m;
+            return d.getHours() + ":" + m;
+        }
+
+        color: textColor;
+        font.family: fontFamily;
+        font.pixelSize: fontSize * fontScale;
+
+        anchors {
+            left: parent.left;
+            leftMargin: font.pixelSize  / 1.5;
+            bottom: parent.bottom;
+            bottomMargin: font.pixelSize / 2.;
+        }
+
+        Timer {
+            interval: 60000;
+            repeat: true;
+            running: true
+            onTriggered: clock.text = clock.currentTime();
+        }
     }
 
-    color: textColor;
-    font.family: fontFamily;
-    font.pixelSize: fontSize * fontScale;
 
-    anchors.bottom: parent.bottom;
-    anchors.left: parent.left;
-    anchors.margins: font.pixelSize;
+    Text {
+        color: textColor;
+        font.family: fontFamily;
+        font.pixelSize: fontSize * fontScale;
 
-    Timer {
-        interval: 60000;
-        repeat: true;
-        running: true
-        onTriggered: clock.text = clock.currentTime();
+        anchors {
+            right: parent.right;
+            rightMargin: font.pixelSize / 1.5;
+            bottom: parent.bottom;
+            bottomMargin: font.pixelSize / 2.;
+        }
+
+        // x: presentation.width - width * 1.5
+        // y: presentation.height - font.pixelSize - 0.02 * presentation.height
+        //font { pointSize: 20 }
+        text: (1 + presentation._lastShownSlide) + "/" + presentation.slides.length
+        //color: "#ffff00"
+        visible: true//!presentation.slides[presentation._lastShownSlide].hideBar
     }
 }

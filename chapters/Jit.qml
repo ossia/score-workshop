@@ -2,9 +2,9 @@ import ".."
 
 Chapter {
     title: "C++ JIT"
-    image: "docimages/features/jit.png"
+    image: "docimages/features/js.png"
     Section {
-        
+
         title: "C++ JIT"
     }
 }

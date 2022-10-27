@@ -27,7 +27,7 @@ Slide
     Application{
         id: launcher
 
-        appName: "/home/jcelerier/build-developer-llvm14-mold/ossia-score --no-restore "
+        appName: "/home/jcelerier/build-developer-mold-qt6/ossia-score --no-restore "
         arguments: slide.score
      }
     Image {

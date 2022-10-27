@@ -46,7 +46,7 @@ import QtGraphicalEffects 1.0
 
 Item {
     id: root
-    
+
     property var slides: []
     property var slideContainers: []
     property int currentSlide: 0
@@ -64,6 +64,7 @@ Item {
     property real fontScale: 1
     property string codeFontFamily: "Courier New"
 
+    property int tocSlide: 1
     // Private API
     property bool _faded: false
     property int _lastShownSlide: 0
@@ -72,7 +73,7 @@ Item {
         var slideCount = 0;
         var slides = [];
         var slideContainers = [];
-        for (let i=0; i<root.children.length; ++i) 
+        for (let i=0; i<root.children.length; ++i)
         {
             const r = root.children[i];
             if (r.isSlide) {
@@ -89,7 +90,7 @@ Item {
                     if(subr.isSlide)
                     {
                         slides.push(subr);
-                        
+
                         subr.slideIndex = slideCount;
                         slideCount++;
                     }
@@ -113,8 +114,8 @@ Item {
         // Make first slide visible...
         if (root.slides.length > 0)
             root.slides[root.currentSlide].visible = true;
-        
-        
+
+
         slidesParsed();
     }
 
@@ -127,11 +128,11 @@ Item {
     onCurrentSlideChanged: {
         switchSlides(root.slides[_lastShownSlide], root.slides[currentSlide], currentSlide > _lastShownSlide)
         _lastShownSlide = currentSlide
-        
+
         // Slide visitation
         let cur = root.slides[currentSlide];
         cur.visited = true
-        
+
         // For chapter visitation
         if(cur.parent.visited === false)
         {
@@ -156,6 +157,12 @@ Item {
         if (currentSlide - 1 >= 0)
             --currentSlide;
     }
+    function goToTOC() {
+        console.log("ok wftf");
+        if (root._faded)
+            return
+        currentSlide = tocSlide
+    }
 
     // navigate with arrow keys
     Shortcut { sequence: StandardKey.MoveToNextLine; enabled: root.arrowNavigation; onActivated: goToNextSlide() }
@@ -168,6 +175,7 @@ Item {
     Shortcut { sequence: "c"; enabled: root.keyShortcutsEnabled; onActivated: root._faded = !root._faded }
 
     // standard shortcuts
+    Shortcut { sequence: "Home"; onActivated: goToTOC() }
     Shortcut { sequence: StandardKey.MoveToNextPage; onActivated: goToNextSlide() }
     Shortcut { sequence: StandardKey.MoveToPreviousPage; onActivated: goToPreviousSlide() }
     Shortcut { sequence: StandardKey.Quit; onActivated: Qt.quit() }

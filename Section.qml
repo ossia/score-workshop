@@ -8,22 +8,22 @@ Slide
     property alias title: title.text
     property string topText
     readonly property bool isSection: true
-    
+
     property string process
     property var args: [ ]
-    
+
     fontScale: process === "" ? 1 : 1.5
 
-    
+
     function compute()
     {
         proc.start(process, args);
     }
-    
+
     Process {
         id: proc
     }
-    
+
     /*
     Image {
         z: -20
@@ -87,5 +87,24 @@ Slide
             hoverEnabled: true
             onClicked: compute()
         }
+    }
+
+
+    Image {
+        id: image
+        //anchors.centerIn: parent
+        anchors.fill: parent
+        source: parent.parent.image
+        fillMode: Image.PreserveAspectCrop
+        opacity: 0
+        z: -2
+    }
+    GaussianBlur {
+        source: image
+        anchors.fill: image
+        radius: 16
+        samples: 64
+        opacity: 0.1
+        z:-1
     }
 }

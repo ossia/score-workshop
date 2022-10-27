@@ -4,10 +4,11 @@ Item {
     id: root
     property bool isSlideContainer: true
     property bool visited: false
+    property bool bigChapter: false
     property string image
     property string title
     property string subtitle
-    
+
     Section {
         title: root.subtitle.length > 0 ? root.subtitle : root.title
         fontScale: 2
@@ -28,6 +29,5 @@ Item {
             opacity: 0.3
             z:-1
         }
-        
     }
 }

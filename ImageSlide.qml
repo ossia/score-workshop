@@ -48,6 +48,14 @@ Slide {
     property bool autoScale: false
     property bool fullScreen: false
 
+    property var bgColor: undefined
+
+    Rectangle {
+        anchors.fill: slide
+        visible: bgColor !== undefined
+        color: visible ? bgColor : "transparent"
+    }
+
     Image {
         id: image
         anchors.centerIn: slide.autoScale ? undefined : parent
