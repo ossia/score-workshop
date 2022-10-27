@@ -3,6 +3,8 @@ import ".."
 Chapter {
     title: "Installation work"
     image: "gallery/carrousel.jpg"
+    bigChapter: true
+
     Section {
         title: "Using ossia for installation work"
     }
