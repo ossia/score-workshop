@@ -133,4 +133,6 @@ Presentation {
 
     */
 
+    property bool loadingComplete: false
+    Component.onCompleted: { loadingComplete = true; console.log("ayy", loadingComplete) }
 }

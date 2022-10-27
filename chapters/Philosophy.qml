@@ -18,10 +18,19 @@ Chapter {
     }
 
     Section {
-        title: "Right tool for the job<br><br>
+        identifier: "philosophy.programming"
+        title: "Programming philosophy<br><br>
+Core language: very simple<br>
+Extend with domain-specific languages:<br>
 ossia score embeds <b>many</b> programming languages<br>
-Faust, JavaScript, C++, math expressions, <br>
-GLSL (ISF), Bytebeat, StructureSynth, ..."
+ - GLSL (ISF) for video<br>
+ - Faust for Audio<br>
+ - JS for scripting<br>
+ - Math expressions, jq<br>
+ - ByteBeat, Structure Synth, ...<br>
+etc...<br><br>
+Use the right tool for the job"
+
     }
 
     Section {

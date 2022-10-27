@@ -53,6 +53,7 @@ Item {
 
     property bool isSlide: true;
     property int slideIndex: 0
+    property string identifier
 
     property bool delayPoints: false;
     property int _pointCounter: 0;
@@ -158,7 +159,7 @@ Item {
 /*
         Column {
             id: bulletPointsColumn
-            
+
             anchors.fill: parent
 
             Repeater {

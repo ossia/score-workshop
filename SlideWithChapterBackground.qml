@@ -8,7 +8,7 @@ Slide
         id: image
         //anchors.centerIn: parent
         anchors.fill: parent
-        source: parent.parent.image
+        source: currentChapter.image
         fillMode: Image.PreserveAspectCrop
         opacity: 0
         z: -2

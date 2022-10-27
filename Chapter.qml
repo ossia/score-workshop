@@ -1,7 +1,7 @@
 import QtQuick 2.15
 import QtGraphicalEffects 1.15
 Item {
-    id: root
+    id: currentChapter
     property bool isSlideContainer: true
     property bool visited: false
     property bool bigChapter: false
@@ -10,13 +10,13 @@ Item {
     property string subtitle
 
     Section {
-        title: root.subtitle.length > 0 ? root.subtitle : root.title
+        title: currentChapter.subtitle.length > 0 ? currentChapter.subtitle : currentChapter.title
         fontScale: 2
         Image {
             id: image
             //anchors.centerIn: parent
             anchors.fill: parent
-            source: root.image
+            source: currentChapter.image
             fillMode: Image.PreserveAspectCrop
             opacity: 0
             z: -2
