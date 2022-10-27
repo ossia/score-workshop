@@ -3,9 +3,6 @@ import ".."
 Chapter {
     title: "Time Model"
     image: "docimages/features/cue.png"
-    Section {
-        title: "Time model"
-    }
 
     Section {
         title: "In-between DAW, patcher, looper, ...\nMeta-sequencer\nTree of \"tracks\""
@@ -29,7 +26,7 @@ Chapter {
 
     ScoreSlide {
         title: "Example"
-        score: "/home/jcelerier/tenor2022/timeflo2.score"
+        score: "tenor2022/timeflo2.score"
     }
 
 }

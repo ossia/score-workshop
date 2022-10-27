@@ -41,7 +41,7 @@
 
 import QtQuick 2.5
 
-Slide {
+SlideWithChapterBackground {
     id: slide
 
     property alias source: image.source

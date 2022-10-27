@@ -23,12 +23,18 @@ SlideWithChapterBackground
     }
     */
 
+    function localPath()
+    {
+      var path = Qt.resolvedUrl(".").toString();
+      path = path.replace(/^(file:\/{3})/,"");
+      return "/" + decodeURIComponent(path) + "/";
+    }
 
     Application{
         id: launcher
 
         appName: "/home/jcelerier/build-debugsyms-fast-mold-qt6-static-release/ossia-score --no-restore "
-        arguments: slide.score
+        arguments: localPath() + slide.score
      }
     Image {
         id: bg

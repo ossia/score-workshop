@@ -10,6 +10,6 @@ Chapter {
 
     ScoreSlide {
         title: "Example with PureData"
-        score: "/home/jcelerier/tenor2022/pd-oscquery.score"
+        score: "tenor2022/pd-oscquery.score"
     }
 }

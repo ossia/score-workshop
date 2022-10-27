@@ -19,6 +19,6 @@ Chapter {
 
     ScoreSlide {
         title: "Example"
-        score: "/home/jcelerier/tenor2022/tempo3.score"
+        score: "tenor2022/tempo3.score"
     }
 }

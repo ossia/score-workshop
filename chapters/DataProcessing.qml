@@ -13,6 +13,6 @@ Main use case: machine learning<br>"
 
     ScoreSlide {
         title: "Example: YOLOv4"
-        score: "/home/jcelerier/tenor2022/yolov4.score"
+        score: "tenor2022/yolov4.score"
     }
 }
