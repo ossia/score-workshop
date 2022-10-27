@@ -29,7 +29,7 @@ Chapter {
 
     ScoreSlide {
         title: "Example"
-        score: "/home/jcelerier/tenor2022/timeflo.score"
+        score: "/home/jcelerier/tenor2022/timeflo2.score"
     }
 
 }

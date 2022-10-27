@@ -8,7 +8,7 @@ Chapter {
         title: "Playing with audio files"
     }
     Section {
-        title: "Applying effects"
+        title: "Applying effects<br><br>Supported: VST, VST3, LV2, JSFX (Reaper), <br>Faust, PureData, JavaScript"
     }
     Section {
         title: "Loops"
