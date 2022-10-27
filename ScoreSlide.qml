@@ -27,7 +27,7 @@ SlideWithChapterBackground
     Application{
         id: launcher
 
-        appName: "/home/jcelerier/build-developer-mold-qt6/ossia-score --no-restore "
+        appName: "/home/jcelerier/build-debugsyms-fast-mold-qt6-static-release/ossia-score --no-restore "
         arguments: slide.score
      }
     Image {

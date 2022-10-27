@@ -45,6 +45,7 @@ import QtQuick 2.0
 
 Item {
     id: clock
+    z:10
     anchors.fill: parent
     property real fontSize: parent.height * 0.05
     property real fontScale: 0.5
@@ -60,6 +61,7 @@ Item {
 
 
     Text {
+        id: clocktext
         text: clock.currentTime();
 
         color: textColor;
@@ -77,7 +79,7 @@ Item {
             interval: 60000;
             repeat: true;
             running: true
-            onTriggered: text = clock.currentTime();
+            onTriggered: clocktext.text = clock.currentTime();
         }
     }
 
@@ -100,5 +102,10 @@ Item {
         text: (1 + presentation._lastShownSlide) + "/" + presentation.slides.length
         //color: "#ffff00"
         visible: true//!presentation.slides[presentation._lastShownSlide].hideBar
+
+        MouseArea {
+            anchors.fill: parent
+            onClicked: presentation.currentSlide = 1
+        }
     }
 }

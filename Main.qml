@@ -10,7 +10,8 @@ Presentation {
     height: 1080
     //titleColor: "#20035a"
 
-    titleColor: "#B8BB26"
+    //titleColor: "#B8BB26"
+    titleColor: Qt.lighter(sectionColor)
     arrowNavigation: false
     fontFamily: "Fira Sans"
     fontScale: 1.0

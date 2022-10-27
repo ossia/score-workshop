@@ -3,12 +3,15 @@ import ".."
 Chapter {
     title: "Automating"
     image: "docimages/features/automation.png"
-    
+
     Section {
         title: "Automating a device"
     }
     Section {
         title: "Automating a process"
+    }
+    Section {
+        title: "Audio fades"
     }
     Section {
         title: "Recording automations"

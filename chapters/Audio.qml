@@ -4,7 +4,7 @@ Chapter {
     title: "Audio"
     image: "docimages/features/audio.png"
 
-    Section {
+    ScoreSlide {
         title: "Playing with audio files"
     }
     Section {
@@ -12,8 +12,5 @@ Chapter {
     }
     Section {
         title: "Loops"
-    }
-    Section {
-        title: "Fades"
     }
 }

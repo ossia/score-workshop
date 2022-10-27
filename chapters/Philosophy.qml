@@ -29,9 +29,9 @@ GLSL (ISF), Bytebeat, StructureSynth, ..."
     }
 
     Section {
-        title: "Many ways to do things<br><br>
-Still trying to understand the complete implications of the object<br>
-Stylistic questioning<br>
+        title: "Many ways to achieve a result<br><br>
+Still trying to understand the complete implications<br>of the 'ossia score' object<br>
+Stylistic questioning?<br>  Idioms are starting to appear<br>
 Open-ended<br>"
     }
 
@@ -41,4 +41,19 @@ Large objects with complex behaviours<br>
 Closer to Ableton / Bitwig devices<br>
 Than Max / PureData objects"
     }
+
+    // Existing score examples
+    GallerySlide {
+        spacing: 400
+        images: ["./score-examples/arbreintegral.png",
+"./score-examples/icmc.png",
+"./score-examples/metabot.png",
+"./score-examples/nebula.png",
+"./score-examples/nuitcherch.png",
+"./score-examples/quarre.png",
+"./score-examples/voyage.png"
+]
+    }
+
+
 }
