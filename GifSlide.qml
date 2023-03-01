@@ -44,12 +44,12 @@ import QtQuick 2.5
 SlideWithChapterBackground {
     id: slide
 
-    property alias source: image.source
+    property alias source: theImage.source
     property bool autoScale: false
     property bool fullScreen: false
 
     AnimatedImage {
-        id: image
+        id: theImage
         anchors.centerIn: slide.autoScale ? undefined : parent
         anchors.fill: slide.autoScale ? parent : undefined
         anchors.margins: fullScreen ? 0 : 20

@@ -3,23 +3,27 @@ import ".."
 Chapter {
     title: "Mapping"
     image: "docimages/features/mapper.png"
-    Section {
+    ScoreSlide {
         title: "Mapping parameters: mostly automatic!<br>Thanks to the device abstraction"
     }
 
-    Section {
+    ScoreSlide {
         title: "Mapping an input device to a process parameter\nFor example: MIDI slider to a VST parameter"
     }
 
-    Section {
+    ScoreSlide {
         title: "Mapping an input to an output through the mapping curve process"
     }
 
-    Section {
+    ScoreSlide {
         title: "Mapping an input to an output through an expression process"
     }
 
-    Section {
+    ScoreSlide {
         title: "Smoothing signals"
+    }
+
+    ScoreSlide {
+        title: "Mapping external APIs"
     }
 }

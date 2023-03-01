@@ -23,18 +23,30 @@ SlideWithChapterBackground
     }
     */
 
+
     function localPath()
     {
-      var path = Qt.resolvedUrl(".").toString();
+      let path = Qt.resolvedUrl(".").toString();
       path = path.replace(/^(file:\/{3})/,"");
       return "/" + decodeURIComponent(path) + "/";
+    }
+
+    function locateScore(filename)
+    {
+        let f = filename.replace('~', '/home/jcelerier/')
+        if(f.charAt(0) === '/')
+            return f;
+        else
+            return localPath() + filename;
     }
 
     Application{
         id: launcher
 
+        //appName: "/home/jcelerier/build-developer-mold-qt6/ossia-score --no-restore "
         appName: "/home/jcelerier/build-debugsyms-fast-mold-qt6-static-release/ossia-score --no-restore "
-        arguments: localPath() + slide.score
+        arguments: locateScore(slide.score)
+        environment: [ "SCORE_DISABLE_LV2=1", "SCORE_DISABLE_AUDIOPLUGINS=1" ]
      }
     Image {
         id: bg

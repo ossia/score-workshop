@@ -5,11 +5,14 @@ Chapter {
     image: "docimages/features/threedim.png"
 
 
-    Section {
+    ScoreSlide {
         title: "Loading & using 3D meshes"
+        score: "tenor2022/threedim.score"
+
     }
 
-    Section {
+    ScoreSlide {
         title: "Generative meshes with Structure Synth"
+        score: "tenor2022/ssynth.score"
     }
 }

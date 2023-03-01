@@ -8,7 +8,7 @@ Chapter {
     Section {
         title: "Using ossia for installation work"
     }
-    Section {
+    ScoreSlide {
         title: "Making a score loop"
     }
     Section {
@@ -16,5 +16,8 @@ Chapter {
     }
     Section {
         title: "Running on embedded devices"
+    }
+    FlickableImageSlide {
+        source: "../images/docs/Embedded.png"
     }
 }

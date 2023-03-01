@@ -12,4 +12,8 @@ Chapter {
         title: "Example with PureData"
         score: "tenor2022/pd-oscquery.score"
     }
+
+    Section {
+        title: "Recording automations"
+    }
 }

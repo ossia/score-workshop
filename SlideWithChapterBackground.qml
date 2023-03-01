@@ -5,17 +5,17 @@ import dev.celtera 1.0
 Slide
 {
     Image {
-        id: image
+        id: backgroundImg
         //anchors.centerIn: parent
         anchors.fill: parent
-        source: currentChapter.image
+        source: image
         fillMode: Image.PreserveAspectCrop
         opacity: 0
         z: -2
     }
     GaussianBlur {
-        source: image
-        anchors.fill: image
+        source: backgroundImg
+        anchors.fill: backgroundImg
         radius: 16
         samples: 64
         opacity: 0.1

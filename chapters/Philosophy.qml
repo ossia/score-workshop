@@ -14,12 +14,13 @@ Chapter {
     }
 
     Section {
+        identifier: "philosophy.timeflow"
         title: "Time flow, data flow"
     }
 
     Section {
         identifier: "philosophy.programming"
-        title: "Programming philosophy<br><br>
+        title: "<b>Programming philosophy</b><br><br>
 Core language: very simple<br>
 Extend with domain-specific languages:<br>
 ossia score embeds <b>many</b> programming languages<br>
@@ -34,21 +35,34 @@ Use the right tool for the job"
     }
 
     Section {
-        title: "Explicit parameter abstraction"
+        identifier: "philosophy.parameter"
+        title: "<b>Explicit parameter abstraction</b><br><br>
+Normalizes the behaviour across all<br>
+peripherals<br>
+Based on the Jamoma model (parameters, ...)"
     }
 
     Section {
-        title: "Many ways to achieve a result<br><br>
+        identifier: "philosophy.openended"
+        title: "<b>Many ways to achieve a result</b><br><br>
 Still trying to understand the complete implications<br>of the 'ossia score' object<br>
-Stylistic questioning?<br>  Idioms are starting to appear<br>
+Stylistic questioning?<br>
+Idioms are starting to appear<br>
 Open-ended<br>"
     }
 
     Section {
-        title: "Object philosophy<br>
+        identifier: "philosophy.objects"
+        title: "<b>Object philosophy</b><br><br>
 Large objects with complex behaviours<br>
 Closer to Ableton / Bitwig devices<br>
 Than Max / PureData objects"
+    }
+
+    Section {
+        identifier: "philosophy.objects2"
+        title: "<b>In short</b><br><br>
+objects should be <it>artistically meaningful</it>"
     }
 
     // Existing score examples

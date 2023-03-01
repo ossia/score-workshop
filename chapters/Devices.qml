@@ -7,22 +7,34 @@ Chapter {
     //     title: "OSC-ish tree model"
     // }
 
-    Section {
-        title: "MIDI"
-    }
-    Section {
+    ScoreSlide {
         title: "OSC"
+        score: "score-files/osc.score"
     }
+    ScoreSlide {
+        title: "MIDI: the same"
+    }
+    /*
     Section {
         title: "TouchOSC support"
-    }
+    }*/
     Section {
-        title: "OSCQuery"
+        title: 'OSCQuery<br><br>
+<a href="https://github.com/Vidvox/OSCQueryProposal">https://github.com/Vidvox/OSCQueryProposal</a><br><br>
+Example later with PureData<br>'
     }
-    Section {
+    ScoreSlide {
         title: "ArtNet"
     }
+    ScoreSlide {
+        title: "Gamepads"
+        score:  "tenor2022/gamepad.score"
+    }
     Section {
-        title: "WebSocket, HTTP"
+        title: "WebSocket, HTTP, Serial port"
+        SlideReminesce
+        {
+            identifier: "philosophy.parameter"
+        }
     }
 }

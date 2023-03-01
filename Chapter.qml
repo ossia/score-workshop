@@ -13,7 +13,7 @@ Item {
         title: currentChapter.subtitle.length > 0 ? currentChapter.subtitle : currentChapter.title
         fontScale: 2
         Image {
-            id: image
+            id: chapterImage
             //anchors.centerIn: parent
             anchors.fill: parent
             source: currentChapter.image
@@ -22,8 +22,8 @@ Item {
             z: -2
         }
         GaussianBlur {
-            source: image
-            anchors.fill: image
+            source: chapterImage
+            anchors.fill: chapterImage
             radius: 16
             samples: 64
             opacity: 0.3

@@ -4,7 +4,7 @@ Chapter {
     title: "UI basics"
     image: "docimages/features/execution.png"
 
-    Section {
+    ScoreSlide {
         title: "Basic UI metaphor"
     }
 

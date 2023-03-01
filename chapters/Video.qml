@@ -13,12 +13,23 @@ Chapter {
 ${link("isf.video")}`
     }
 
-    Section {
+    ScoreSlide {
         title: "Making audio-reactive behaviours"
+        score: "tenor2022/audioreactive.score"
     }
 
     Section {
         title: "Video basics: mixing, mapping"
     }
 
+    FlickableImageSlide {
+        //autoScale: true
+        //fullScreen: true
+        source: "../images/docs/Videomix.png"
+    }
+
+    ScoreSlide {
+        title: "Camera support"
+        score: "score-files/camera.score"
+    }
 }

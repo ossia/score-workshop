@@ -3,7 +3,7 @@ import ".."
 Chapter {
     title: "MIDI"
     image: "docimages/features/midi.png"
-    
+
     Section {
         title: "MIDI input / output devices"
     }
@@ -15,5 +15,8 @@ Chapter {
     }
     Section {
         title: "MIDI processes"
+    }
+    ScoreSlide {
+        title: "Example"
     }
 }

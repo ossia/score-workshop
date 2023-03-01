@@ -9,10 +9,12 @@ Chapter {
     Section {
         title: `${link("https://faust.grame.fr")}`
     }
-    Section {
+    ScoreSlide {
         title: "Using Faust programs from the library"
     }
+    /*
     Section {
         title: "Simple code examples"
     }
+    */
 }

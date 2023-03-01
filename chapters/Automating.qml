@@ -4,17 +4,18 @@ Chapter {
     title: "Automating"
     image: "docimages/features/automation.png"
 
-    Section {
+    ScoreSlide {
         title: "Automating a device"
     }
     Section {
         title: "Automating a process"
     }
-    Section {
-        title: "Audio fades"
+    ScoreSlide {
+        title: "Controlling a device with processes"
+        score: "tenor2022/automating2.score"
     }
     Section {
-        title: "Recording automations"
+        title: "Audio fades"
     }
     Section {
         title: "2D automations"

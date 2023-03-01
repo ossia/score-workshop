@@ -8,7 +8,7 @@ Chapter {
     }
 
     ScoreSlide {
-
+      title: "Using JavaScript"
     }
 
     FlickableImageSlide {

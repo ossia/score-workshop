@@ -3,14 +3,16 @@ import ".."
 Chapter {
     title: "Network"
     image: "images/score.png"
-    
-    Section {
-        title: "Concepts"
-    }    
-    Section {
-        title: "Distributed editing"
+
+    ScoreSlide {
+        title: "Distributed authoring"
     }
+
     Section {
         title: "Distributed playback and execution"
+    }
+
+    Section {
+        title: `Web support<br>${link("ossia.io/score-web")}`
     }
 }

@@ -21,5 +21,23 @@ Internships every year<br>"
         source: "../docimages/organ-navid.jpeg"
     }
 
+    Section {
+        identifier: "postdoc.mapping"
+        title: "Postdoc objectives:<br>
+- Simple way to generate efficient, specialized mapping processors<br>
+- Deport data processing to the edge<br>
+-> on embedded<br>
+-> on web pages<br>
+-> embedded in other apps (Max, Unreal, etc.)<br>
+- simplify control of things through serial port, etc.
+"
+    }
+
+    Section {
+        title: "Improving usability<br><br>
+<U>YOU</U> ARE NEEDED!<br>
+Any feedback is good<br>
+Series of hands-on workshops over the year"
+    }
 
 }

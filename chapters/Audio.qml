@@ -8,9 +8,9 @@ Chapter {
     ScoreSlide {
         title: "Playing with audio files"
     }
-    Section {
+    ScoreSlide {
         title: "Applying effects<br><br>Supported: VST, VST3, LV2, JSFX (Reaper), <br>Faust, PureData, JavaScript"
-
+        score: "tenor2022/audiofx.score"
         SlideReminesce {
             identifier: "philosophy.programming"
         }

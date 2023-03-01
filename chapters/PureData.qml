@@ -2,7 +2,7 @@ import ".."
 
 Chapter {
     title: "PureData"
-    image: "docimages/features/js.png"
+    image: "docimages/features/pd.png"
 
 
     ScoreSlide {
