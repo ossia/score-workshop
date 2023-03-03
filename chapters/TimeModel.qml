@@ -9,6 +9,18 @@ Chapter {
     }
 
     ImageSlide {
+        source: "../images/intro/protools.webp"
+    }
+    ImageSlide {
+        source: "../images/intro/max.png"
+    }
+    ImageSlide {
+        source: "../images/intro/qlab.png"
+    }
+    ImageSlide {
+        source: "../images/intro/resolume.png"
+    }
+    ImageSlide {
         source: "../docimages/features/cue.png"
     }
 

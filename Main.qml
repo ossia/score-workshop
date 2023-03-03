@@ -64,6 +64,7 @@ Presentation {
             "gallery/quarre.jpg",
             "gallery/Nebula_ChampignonsNeigeJaune.jpg",
             "gallery/metabot_score.jpg",
+            "gallery/nova_visual_01.png",
             "gallery/heimat.jpeg",
             "gallery/Qui-parle-donc_Event.jpg",
             "gallery/dome_scrime.jpg",
@@ -72,7 +73,7 @@ Presentation {
         ]
     }
     Resources { }
-    Examples { }
+    // Examples { }
 
     TimeModel { }
     UiBasics { }
