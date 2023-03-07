@@ -77,7 +77,8 @@ objects should be <it>artistically meaningful</it>"
 "./score-examples/voyage.png",
             "./score-examples/walking.png",
             "./score-examples/hermes.png",
-            "./score-examples/sonif.png"
+            "./score-examples/sonif.png",
+            "./score-examples/airfiltration.png"
 ]
     }
 
