@@ -163,7 +163,6 @@ Item {
             --currentSlide;
     }
     function goToTOC() {
-        console.log("ok wftf");
         if (root._faded)
             return
         currentSlide = tocSlide

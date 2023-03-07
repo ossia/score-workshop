@@ -74,7 +74,10 @@ objects should be <it>artistically meaningful</it>"
 "./score-examples/nebula.png",
 "./score-examples/nuitcherch.png",
 "./score-examples/quarre.png",
-"./score-examples/voyage.png"
+"./score-examples/voyage.png",
+            "./score-examples/walking.png",
+            "./score-examples/hermes.png",
+            "./score-examples/sonif.png"
 ]
     }
 

@@ -12,6 +12,7 @@ SlideWithChapterBackground
     readonly property bool isSubsection: true
     fontScale: 1.3
 
+    property real scaleRatio: 1.0
     property string score
 
     /*
@@ -46,7 +47,7 @@ SlideWithChapterBackground
         //appName: "/home/jcelerier/build-developer-mold-qt6/ossia-score --no-restore "
         appName: "/home/jcelerier/build-debugsyms-fast-mold-qt6-static-release/ossia-score --no-restore "
         arguments: locateScore(slide.score)
-        environment: [ "SCORE_DISABLE_LV2=1", "SCORE_DISABLE_AUDIOPLUGINS=1" ]
+        environment: [ "SCORE_DISABLE_LV2=1", "SCORE_DISABLE_AUDIOPLUGINS=1", `QT_SCALE_FACTOR=${scaleRatio}`]
      }
     Image {
         id: bg

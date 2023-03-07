@@ -1,5 +1,5 @@
 import QtQuick 2.15
-import QtMultimedia 5.15
+//import QtMultimedia 5.15
 
 import "chapters/"
 
@@ -73,10 +73,14 @@ Presentation {
         ]
     }
     Resources { }
-    // Examples { }
+    Examples { }
 
     TimeModel { }
     UiBasics { }
+
+    ScoringLanguage { }
+
+
     Audio { }
     Video { }
     Documentation { }
@@ -138,5 +142,4 @@ Presentation {
     */
 
     property bool loadingComplete: false
-    Component.onCompleted: { loadingComplete = true; console.log("ayy", loadingComplete) }
 }
