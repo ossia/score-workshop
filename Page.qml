@@ -3,9 +3,9 @@ import QtQuick 2.12
 Slide
 {
     textFormat: Text.RichText
-    
-    readonly property bool isSection: true
-    readonly property bool isSubsection: true
+
+    property bool isSection: true
+    property bool isSubsection: true
     readonly property string topText: ""
     /*
     Image {

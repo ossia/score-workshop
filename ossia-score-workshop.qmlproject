@@ -1,8 +1,8 @@
 import QmlProject 1.1
 
 Project {
-    mainFile: "Main.qml"
-
+    mainFile: "Presentations/Tenor2022.qml"
+ //   mainFile: "Presentations/Workshop.qml"
     QmlFiles {
         directory: "."
     }

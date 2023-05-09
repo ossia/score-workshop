@@ -156,7 +156,7 @@ Item {
 
             visible: slide.writeInText != undefined;
         }
-/*
+
         Column {
             id: bulletPointsColumn
 
@@ -208,6 +208,6 @@ Item {
                     }
                 }
             }
-        }**/
+        }
     }
 }

@@ -58,8 +58,9 @@ SlideWithChapterBackground {
 
     Image {
         id: theImage
-        anchors.centerIn: slide.autoScale ? undefined : parent
-        anchors.fill: slide.autoScale ? parent : undefined
+        anchors.centerIn: parent
+        //anchors.fill: slide.autoScale ? parent : undefined
+        sourceSize.width: slide.autoScale ? 0.75 * parent.width : undefined
         anchors.margins: fullScreen ? 0 : 20
         anchors.topMargin: fullScreen ? 0 : 100
         fillMode: Image.PreserveAspectFit
